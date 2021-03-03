@@ -1,0 +1,46 @@
+@import "menu";
+@import "config";
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  &__image {
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.8),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/model-1.jpg");
+    background-position: center top;
+    background-size: cover;
+    .contact-touch {
+      height: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      .head {
+        margin-bottom: 2rem;
+        h2 {
+          margin-left: -4.7rem;
+        }
+      }
+      .contact-details {
+        margin-bottom: 1rem;
+        div {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: -1rem;
+}
+footer {
+  transform: rotate(90deg) translate(-4rem, -5rem);
+}

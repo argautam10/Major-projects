@@ -1,0 +1,34 @@
+$primary-color: black;
+$secondary-color: #ff652f;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}

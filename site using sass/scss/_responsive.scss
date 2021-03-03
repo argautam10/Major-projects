@@ -1,0 +1,51 @@
+@include media-md {
+  .project__bio-image {
+    h2 {
+      color: yellow;
+      font-size: 30px;
+    }
+  }
+
+  .project {
+    .project-item {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      &__items {
+        width: 47%;
+        .project-btns {
+          a {
+            font-size: 1rem;
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-lg {
+  .project__bio-image {
+    h2 {
+      color: rgb(190, 238, 17);
+      font-size: 30px;
+    }
+  }
+
+  .project {
+    .project-item {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      &__items {
+        width: 32%;
+        .project-btns {
+          a {
+            font-size: 1rem;
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

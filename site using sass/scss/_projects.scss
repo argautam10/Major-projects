@@ -1,0 +1,94 @@
+@import "menu";
+@import "config";
+.project {
+  padding-bottom: 2rem;
+  &__bio-image {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.8),
+        rgba($primary-color, 0.3)
+      ),
+      url("../img/model-1.jpg");
+    background-position: center top;
+    background-size: cover;
+    h2 {
+      color: $secondary-color;
+      position: absolute;
+      top: 12rem;
+    }
+  }
+  .project-item {
+    width: 70%;
+    display: flex;
+    flex-flow: column wrap;
+
+    margin: 3rem auto;
+    // overflow: hidden;
+    &__items {
+      width: 100%;
+      height: 16rem;
+      margin-bottom: 2rem;
+      border-bottom: 3px solid $secondary-color;
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .project-btns {
+        position: absolute;
+        bottom: 0;
+        left: 2rem;
+
+        a {
+          color: white;
+          margin-right: 3rem;
+          font-size: 1.2rem;
+        }
+      }
+
+      &::after {
+        content: "";
+        background-color: $secondary-color;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include transition-ease;
+        opacity: 0;
+      }
+      &:hover {
+        &::after {
+          top: 0;
+          overflow: visible;
+          opacity: 0.9;
+        }
+        .project-btns {
+          position: absolute;
+          bottom: 8rem;
+          @include transition-ease;
+          z-index: 3;
+          a {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.social-icons {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: -1rem;
+}
+footer {
+  transform: rotate(90deg) translate(-4rem, -5rem);
+}
